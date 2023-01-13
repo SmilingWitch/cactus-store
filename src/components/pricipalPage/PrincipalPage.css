@@ -1,0 +1,86 @@
+:root{
+    /*--------Azules-----------*/
+
+    --azul1 : #73c3e0 ; 
+    --azul2 : #50b7d7 ;
+    --azul3 : #aad3e9 ;
+    --azul4 : rgb(177, 228, 245) ;
+
+    /*--------Verdes------------*/
+    --verde1 : #223929 ;
+    --verde2 : #73a555 ;
+    --verde3 : #75ab7c ;
+    --verde4 : #b1e4f5 ;
+
+    /*-------Amarillo-----------*/
+    --amarillo1 : #fbdc05 ;
+    --amarillo2 : #eec104 ;
+    --amarillo3 : #fae726 ;
+    --amarillo4 : #dbae09 ;
+
+    --white : white ;
+
+}
+/*@font-face {
+    font-family: m1;
+    src: url(./CoveredByYourGrace-Regular.ttf);
+    /*src: url(./i7dfIFdwYjGaAMFtZd_QA1Zeelmy79QJ1HOSY9AX7ofybRUz1r5t.ttf);*/
+
+*{
+    
+    letter-spacing: 2px ;
+    margin: 0 ;
+    box-sizing: border-box;
+}
+
+.page {
+    width: 100% ;
+    height: 100vh ; 
+    background-image: url(thomas-verbruggen-5A06OWU6Wuc-unsplash.jpg);
+    background-size: cover ;
+    background-attachment: fixed;
+    background-position: bottom;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+
+}
+.bgBox {
+    position: relative ;
+    margin: 0px auto;
+    width: 90% ;
+    height: 90% ;
+    display: grid ;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter:blur(400deg) ;
+    border-radius: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  
+}
+
+
+.bg1 {
+    position: relative ;
+    width: 100% ;
+    height: 100%;
+}
+.bg1 div {
+    position: absolute;
+    font-weight: 700;
+    font-size: 6em ; 
+    background-clip: text;
+    height: 100vh ;
+    width: 100% ;
+    text-transform: uppercase;
+    background-image: url(thomas-verbruggen-5A06OWU6Wuc-unsplash.jpg);
+    background-size: cover ;
+    background-attachment: fixed;
+    background-position: bottom;
+    -webkit-background-clip: text ;
+}
+.bg2 {
+    position: relative;
+  
+    width: 100%;
+    height: 100%;
+}

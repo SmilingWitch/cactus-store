@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import PrincipalPage from './components/pricipalPage/PrincipalPage';
+import { Routes, Route } from 'react-router-dom';
+import Suculentas from './pages/Suculentas.jsx';
+import Cactus from './pages/Cactus';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+      <Route path = "/" element = {<PrincipalPage/>} />
+      <Route path = "/cactus" element = {<Cactus/>}/> 
+      <Route path = "/suculentas" element = {<Suculentas/>}/>
+      </Routes>
     </div>
+    
   );
 }
 
