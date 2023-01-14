@@ -21,10 +21,10 @@
     --white : white ;
 
 }
-/*@font-face {
+@font-face {
     font-family: m1;
-    src: url(./CoveredByYourGrace-Regular.ttf);
-    /*src: url(./i7dfIFdwYjGaAMFtZd_QA1Zeelmy79QJ1HOSY9AX7ofybRUz1r5t.ttf);*/
+    src: url(./Anton-Regular.ttf);
+} 
 
 *{
     
@@ -35,52 +35,106 @@
 
 .page {
     width: 100% ;
-    height: 100vh ; 
-    background-image: url(thomas-verbruggen-5A06OWU6Wuc-unsplash.jpg);
+    height: 100vh ;
+    background: #223929;
+    background-image: url(./thomas-verbruggen-5A06OWU6Wuc-unsplash.jpg);
     background-size: cover ;
-    background-attachment: fixed;
     background-position: bottom;
+    background-attachment: fixed ;
     display: flex ;
     align-items: center ;
-    justify-content: center;
+    justify-content: center ;
 
 }
-.bgBox {
-    position: relative ;
-    margin: 0px auto;
-    width: 90% ;
-    height: 90% ;
-    display: grid ;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter:blur(400deg) ;
-    border-radius: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-  
-}
-
-
-.bg1 {
-    position: relative ;
-    width: 100% ;
-    height: 100%;
-}
-.bg1 div {
-    position: absolute;
-    font-weight: 700;
-    font-size: 6em ; 
-    background-clip: text;
-    height: 100vh ;
-    width: 100% ;
-    text-transform: uppercase;
-    background-image: url(thomas-verbruggen-5A06OWU6Wuc-unsplash.jpg);
-    background-size: cover ;
-    background-attachment: fixed;
-    background-position: bottom;
-    -webkit-background-clip: text ;
-}
-.bg2 {
+.container {
     position: relative;
-  
+    height: 90% ;
+    width: 90% ;
+    background: rgba(255, 255, 255, 0.6) ;
+    backdrop-filter: blur(300deg );
+    border-radius: 20px;
+    overflow: hidden;
+}
+.header {
+ 
+   
+}
+.texto{
+   position: absolute;
+    width: 100% ;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center ;
+    text-transform: uppercase ;
+    font-size: 200px ;
+    font-weight: bold ;
+    display: flex ;
+    justify-content: center ;
+    align-items: flex-end;
+    
+    background-image: url(./thomas-verbruggen-5A06OWU6Wuc-unsplash.jpg);
+    background-size: cover ;
+    background-position: bottom;
+    background-attachment: fixed;
+    -webkit-background-clip: text ;
+    -webkit-text-fill-color: transparent;
+}
+.Bx{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    
+}
+.cardBx {
+    position: relative;
+    z-index: 10000000000;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    max-width: 80%;
+    min-height: 20%;
+    background: transparent;
+    margin: 10px;
+}
+.imgBx {
+    position: relative ;
+    width: 100% ;
+    height: 100% ;
+    display: flex ;
+    align-items: flex-end ;
+    justify-content: center ;   
+    font-size: 8em;
+    display: flex ;
+    background: yellow;
+    
+}
+
+.content {
+    position: relative;
     width: 100%;
     height: 100%;
+
+    display: flex ;
+    align-items: center;
+    justify-content: center ;
+}
+@media  (max-width: 872px) {
+    .texto{
+        position: absolute;
+         width: 100% ;
+         height: 100vh;
+         overflow: hidden;
+         text-align: center ;
+         text-transform: uppercase ;
+         font-size: 80px ;
+         font-weight: bold ;
+         display: flex ;
+         justify-content: center ;
+         align-items: flex-end;
+         bottom: 50px;
+         background-image: url(./thomas-verbruggen-5A06OWU6Wuc-unsplash.jpg);
+         background-size: cover ;
+         background-position: bottom;
+         background-attachment: fixed;
+         -webkit-background-clip: text ;
+         -webkit-text-fill-color: transparent;
+     }
 }

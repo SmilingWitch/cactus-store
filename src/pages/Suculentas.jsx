@@ -1,21 +1,7 @@
-
 function Suculentas() {
     return <>
-    Suculentas
+        <h1>Suculentas</h1>
     </>
 }
 
 export default Suculentas ;
-
-
-
-{/*function Suculentas() {
-    return (
-        <div>
-            Suculentas
-        </div>
-
-    ) ;
-}
-
-export default Suculentas;*/}

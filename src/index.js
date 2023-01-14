@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Cactus from './pages/Cactus';
 
 const router = createBrowserRouter([
   {
@@ -12,11 +11,14 @@ const router = createBrowserRouter([
     element : <App/>,
     children: [
       {
-        path: "/cactus",
+        path: "/info",
       },
       {
-        path: "/suculentas",
-      }
+        path: "/all",
+      },
+      {
+        path: "/cactus & suculents",
+      },
     ],
   },
   
@@ -27,6 +29,7 @@ const root = ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router = {router} />
   </React.StrictMode>
+  
 );
 
 
