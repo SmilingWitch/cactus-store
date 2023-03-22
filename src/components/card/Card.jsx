@@ -3,12 +3,12 @@ import "./Card.css"
 import {BiRightArrow} from "react-icons/bi"
 
 
-function Card({userId}) {
+function Card(/*{userId}*/) {
 
-    const navigate = useNavigate() 
+    /*const navigate = useNavigate() 
     const handleClick  = () => {
         navigate(`/${userId}`)
-   }
+   }*/
    
    return <>
 
@@ -17,14 +17,11 @@ function Card({userId}) {
                     
                     <h1 className = "name">
                         <div className ="line"></div>
-                        {userId}
+                        Cactus & Succulents
                     </h1>
                 
                 <div className = "img">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                </div>
-                <div className = "icon" onClick = {handleClick}>
-                    <BiRightArrow className = "arrow"/>
+                    <p>The fascinating and amazing world of <span>cactus</span> and <span>succulents</span></p>
                 </div>
             </div>
  

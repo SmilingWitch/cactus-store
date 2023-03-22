@@ -32,6 +32,13 @@
     margin: 0 ;
     box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+    font-family: 'Poppins', sans-serif;
+}
 
 .page {
     width: 100% ;
@@ -55,15 +62,12 @@
     border-radius: 20px;
     overflow: hidden;
 }
-.header {
- 
-   
-}
+
 .texto{
    position: absolute;
     width: 100% ;
     height: 100vh;
-    overflow: hidden;
+    z-index: 1;
     text-align: center ;
     text-transform: uppercase ;
     font-size: 200px ;
@@ -80,61 +84,116 @@
     -webkit-text-fill-color: transparent;
 }
 .Bx{
+    position: relative;
+    min-height: 70% ;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    
+    z-index: 2;
 }
 .cardBx {
     position: relative;
-    z-index: 10000000000;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-    max-width: 80%;
-    min-height: 20%;
-    background: transparent;
-    margin: 10px;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    width: 100%;
+    height: 100%;
+     
 }
-.imgBx {
-    position: relative ;
-    width: 100% ;
-    height: 100% ;
-    display: flex ;
-    align-items: flex-end ;
-    justify-content: center ;   
-    font-size: 8em;
-    display: flex ;
-    background: yellow;
-    
-}
+    .Card {
+        display: flex ;
+        align-items: center ;
+        justify-content: center;
+    }
 
-.content {
+
+/*-------SOCIAL MEDIA----------*/
+
+.SMBx {
     position: relative;
     width: 100%;
     height: 100%;
-
     display: flex ;
     align-items: center;
     justify-content: center ;
+    
+    
 }
+.social_icons, .social_icons *{
+    display: flex ;
+}
+.social_icons {
+    list-style: none ;
+    width: 100% ;
+    height: 100% ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+}
+.social_icons li {
+    position: relative;
+    width: 50px ;
+    height: 50px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    font-size: 1.5em;
+    margin: 20px;
+    transition: all 0.35s ;
+    background-color: orangered;
+    border-radius: 50% ;
+    color: whitesmoke;
+}
+.social_icons li:hover {
+    transform: translateY(-20px);
+    background-color: var(--verde1);
+}
+
+
+/*---------BUTTON-----------*/
+.btBx {
+
+    display: flex ;
+    align-items: flex-start ;
+    justify-content: center;
+}
+.button {
+    width: 200px;
+    height: 50px ;
+    cursor: pointer ;
+    background: rgb(255, 69, 0);
+    border-radius: 30px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    color: white ;
+    font-size: 1em;
+    transition: 0.5s;
+}
+.button:hover {
+    background: var(--verde1) ;
+    color: white;
+} 
+
+
 @media  (max-width: 872px) {
     .texto{
-        position: absolute;
-         width: 100% ;
-         height: 100vh;
-         overflow: hidden;
-         text-align: center ;
-         text-transform: uppercase ;
-         font-size: 80px ;
-         font-weight: bold ;
-         display: flex ;
-         justify-content: center ;
-         align-items: flex-end;
-         bottom: 50px;
-         background-image: url(./thomas-verbruggen-5A06OWU6Wuc-unsplash.jpg);
-         background-size: cover ;
-         background-position: bottom;
-         background-attachment: fixed;
-         -webkit-background-clip: text ;
-         -webkit-text-fill-color: transparent;
+        font-size: 150px ;
+        top: -100px;  
+    }
+    .cardBx {
+
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+
+    }
+}
+@media  (max-width: 809px) {
+    .texto{
+        font-size: 80px ;
+        top: -100px;
+        
      }
+    .Card {
+        display: flex ;
+        align-items: center ;
+        justify-content: center;
+    }
 }
