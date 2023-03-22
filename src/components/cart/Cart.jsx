@@ -15,20 +15,25 @@ function newOrder(name,price,photo,qty) {
 
 function Cart({name , precio, img, qty}) {
 
-     const [item, setItem] = useState({});
+     const [state, setState] = useState({qty:qty});
      const ordersUrl = "http://localhost:3001/orderItem"
+
+     //useEffect( () => {
+     //     console.log("useEffect called in ",name)
+     //     const res = axios.get(orderUrl);          
+     //     setItems(res.data);
+     //     console.log(res)
+     //},[state]);
 
      async function loadItem(url) {
           let res = await axios.get(url);
-          setItem(res.data)
+          setState(res.data)
      }
 
-     async function addItem() {
-          console.log("add item called")
-          const res = await axios.get(ordersUrl);          
-          console.log(res.data)
+    /* async function addItem() {          
+          const res = await axios.get(ordersUrl);
           res.data.map((item) => {
-               if (name === item.name ) {                    
+               if (name === item.name ) {
                     const order = newOrder(item.name,item.price,item.photo,item.qty += 1)
                     let orderUrl = `${ordersUrl}/${item.id}`
                     axios.put(orderUrl,order);
@@ -36,27 +41,26 @@ function Cart({name , precio, img, qty}) {
                }
           });
      }
-
-    async function delItem() {
-          let res = await axios.get(ordersUrl);
-          console.log("del item called")
-          console.log(res.data)
-     
-          res.data.map((item) => {
-               if (name === item.name) {
-                    if (item.qty === 1) {
-                         let orderUrl = `${ordersUrl}/${item.id}`
-                         axios.delete(orderUrl)                         
-                         loadItem(orderUrl)
-                    } else {
-                         const order = newOrder(item.name,item.price,item.photo,item.qty-1)
-                         let orderUrl = `${ordersUrl}/${item.id}`
-                         axios.put(orderUrl,order);                         
-                         loadItem(orderUrl)
-                    }
-               }
-          })
-     } 
+*/
+     //async function delItem() {
+     //     let res = await axios.get(ordersUrl);          
+     //     console.log(res.data)
+     //
+     //     res.data.map((item) => {
+     //          if (name === item.name) {
+     //               if (item.qty === 1) {
+     //                    let orderUrl = `${ordersUrl}/${item.id}`
+     //                    axios.delete(orderUrl)                         
+     //                    loadItem(orderUrl)
+     //               } else {
+     //                    const order = newOrder(item.name,item.price,item.photo,item.qty-1)
+     //                    let orderUrl = `${ordersUrl}/${item.id}`
+     //                    axios.put(orderUrl,order);                         
+     //                    loadItem(orderUrl)
+     //               }
+     //          }
+     //     })
+     //} 
           
     return (
         <div className="cartCont">
@@ -75,8 +79,8 @@ function Cart({name , precio, img, qty}) {
 
            </div>
            <div className="iconBx">
-                <div className="trash" onClick={() => delItem()}><GoTrashcan/></div>
-                <div className="addNumber">{item.qty}</div>
+                <div className="trash" /*onClick={() => delItem()}*/><GoTrashcan/></div>
+                <div className="addNumber">{state.qty}</div>
                 <div className="addIcon" onClick={() => addItem()} ><AiOutlinePlus/></div>
 
            </div>

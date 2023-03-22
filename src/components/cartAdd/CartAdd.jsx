@@ -6,11 +6,11 @@ import { useState , useEffect, Context } from "react";
 
 const ordersUrl = "http://localhost:3001/orderItem" ;
 
-async function loadItems() {
-    const res = await axios.get(ordersUrl);
-    //setItems(res.data);
-    console.log(res)
-}
+//async function loadItems() {
+//    const res = await axios.get(ordersUrl);
+//    setItems(res.data);
+//    console.log(res)
+//}
 
 
 function CartAdd() {
@@ -18,6 +18,7 @@ function CartAdd() {
     const [order, setOrder] = useState([{}]);
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalItems, setTotalItems] = useState(0);
+
     // useEffect( () => {
     //     console.log("useEffect called in ",name)
     //     const res = axios.get(orderUrl);          
@@ -39,7 +40,7 @@ function CartAdd() {
             setOrder(res.data)
         }
         handleOrder();
-    }, [])
+    }, )
 
     return (
 
@@ -59,10 +60,10 @@ function CartAdd() {
             </div>
             <div className='petitionsBx'>
                 <div className='gridCart'>
-                    {order.map((item)=> {
-                    return <Cart name = {item.name} precio = {item.price} img = {item.photo} qty = {item.qty}/>
-                })}
-            
+                    {order.map((item)=> {                        
+                        return <Cart name = {item.name} precio = {item.price} img = {item.photo} qty = {item.qty}/>
+                    }
+                )}            
                 </div>
             </div> 
             <div className='order'>
