@@ -1,0 +1,187 @@
+:root{
+    --verde1 : #223929 ;
+    --verde2 : #73a555 ;
+    --catalogeBg :/*rgb(224, 245, 196)*/ whitesmoke;
+}
+
+
+.principalContainer{
+    position: relative;
+    width: 100% ;
+    min-height: 100vh ;
+    z-index: 10000;
+    background: #a1d384;
+   
+}
+.blur{
+    position: relative ;
+    width: 100% ;
+    height: 100vh;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    background-image: url(../../../public/pexels-chris-f-6664458.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+.secundaryContainer{
+ position: relative ;
+ width: 70% ;
+ min-height: 500px;
+ padding: 20px;
+ border-radius: 20px;
+ background: rgba(250, 247, 247, 0.6);
+ backdrop-filter: blur(10px);
+ box-shadow: 0px -1px 12px 0px rgba(0,0,0,0.26);
+-webkit-box-shadow: 0px -1px 12px 0px rgba(0,0,0,0.26);
+-moz-box-shadow: 0px -1px 12px 0px rgba(0,0,0,0.26);
+}
+
+.userInfo{
+ display: grid ;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(400px, 1fr ));
+ width: 100% ;
+ height: 100%;
+}
+.info3{
+    position: relative ;
+    width: 100% ;
+    height: 100%;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+}
+.visible{
+    position: relative;
+    font-size: 12px;
+    color: red;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+}
+.invisible{
+    font-size: 12px;
+    color: transparent;
+}
+
+.logg{
+    position: relative ;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: var(--verde1);
+}
+
+.bgSecundary{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+}
+.bgSecundary span{
+    font-size: 70px ;
+    font-weight: bolder;
+    background-image: url(../../../public/pexels-chris-f-6664458.jpg);
+    background-size: cover;;
+    background-size: cover ;
+    background-position: bottom;
+    background-attachment: fixed;
+    -webkit-background-clip: text ;
+    -webkit-text-fill-color: transparent;
+}
+
+
+form{
+    color: var(--verde1);
+    min-height: 20px;
+    margin-top: 20px;
+    
+}
+form label{
+    position: relative ;
+    padding-top: 10px;
+    right: -15px;
+}
+
+.form-control{
+    padding: 12px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.932);
+    backdrop-filter: blur(10px);
+    border: none;
+    margin-bottom: 20px ;
+    margin-top: 10px;
+    color: rgb(68, 66, 66);
+    border: solid 2px transparent;
+    width: 100%;
+}
+.form-control:focus, .form-control:active{
+    border: solid 2px #a1d384;
+    outline: none;
+
+}
+button{
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: none ;
+    font-size: 15px;
+    color: white;
+    background: linear-gradient(70deg,#4cc406,#80d151,#a3f375);
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.19);
+    margin-top: 20px;
+    transition: 0.2s;
+}
+button:hover{
+    box-shadow: none;
+}
+.acc{
+    position: relative;
+    font-size: 12px ;
+    top: 10px;
+    color: var(--verde1);
+}
+
+@media(max-width: 656px){
+    .secundaryContainer{
+        width: 90% ;
+        min-height: 550px;
+       }
+    .bgSecundary span{
+        font-size: 50px ;
+    }
+}
+
+@media(max-width: 464px){
+    .secundaryContainer{
+        padding: 0px;
+       }
+    .form-control{
+        padding: 9px;
+        border-radius: 20px;
+        margin-bottom: 10px ;
+        margin-top: 10px;
+    }
+    .userInfo{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
+       }
+    form{
+        font-size: 13px;
+    }
+    form input{
+        font-size: 10px; 
+    }
+    button{
+        font-size: 15px;
+    }
+}
