@@ -18,14 +18,14 @@
     --amarillo3 : #fae726 ;
     --amarillo4 : #dbae09 ;
 
-    --white : white ;
+    --white : rgb(255, 252, 252) ;
     --catalogeBg :rgb(224, 245, 196);
 }
 
 
 @font-face {
-    font-family: m1;
-    src: url(./Anton-Regular.ttf);
+    font-family: quiche;
+    src: url("../../../public/quiche-text-bold.ttf");
 } 
 
 *{
@@ -34,66 +34,70 @@
     padding: 0 ;
     box-sizing: border-box ;
 }
-.contcard{
+.contcard1{
     position: relative;
     width: 100% ;
-    min-height: 100vh;
-    background: var(--catalogeBg);
+    min-height: 90vh;
+    background: var(--white);
+    scroll-behavior: smooth;
+
+}
+.header2{
+    position: relative ;
+    background-image: url(../../../public/pexels-scott-webb-305821.jpg) ;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
     display: flex ;
     align-items: center ;
     justify-content: center;
-    
-
 }
 
-.fancy {
+.header2 span{
+    width: 90% ;
+    height: 50%;
+    display: flex ;
+    align-items: center;
+    font-size: 80px;
+    font-weight: lighter;
+    color: #223929;
+}
+
+.fancy1 {
     position: relative ;
     width: 95% ;
     min-height: 100vh;
-    top: 100px;
-    background: var(--catalogeBg);
+    margin: 0 auto;
 }
 .gridCard {
     display: grid;
+    margin: 0 auto;
+    position: relative;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
 }
+.headerCactus1{
+    position: relative;
+    height: 100px;
+    width: 100% ;
+    display: flex ;
+    align-items: end;
+    text-transform: uppercase ;
+    font-size: 30px ;
+    font-weight: lighter ;
+    color: #73a555;
+    margin-top:50px ;
+    border-top: 1px solid #73a555;
 
-@media  (max-width: 809px) {
-    .gridCard{
-        display: block;
+}
+
+@media  (max-width: 556px) {
+    .header2 span{
+        font-size: 50px;
+    }
+    .all {
+        top: 100px;
     }
 }
 
 
 
-/*.section {
-    position: relative ;
-    width: 90% ;
-    min-height: 100vh ;
-
-}
-.bar{
-    width: 100% ;
-    display: flex ;
-    align-items: center ;
-    justify-content: center;
-}
-
-.product {
-    width: 90% ;
-    display: grid ;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr ));
-    margin-top: 50px;
-
-
-}
-.itemBox {
-    width: 150px ;
-    height: 200px;
-    margin-bottom: 10px;
-}
-.itemBox img {
-    object-fit: cover ;
-    width: 100% ;
-    height: 100%;
-}*/

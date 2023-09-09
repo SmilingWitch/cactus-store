@@ -1,16 +1,17 @@
-import ProductCard from "../productCard/ProductCard"
+import ProductCard1 from "../productCard1/ProductCard1"
 import "./AllFilter.css"
 import axios from "axios";
 import { useState , useEffect } from "react";
+import Cactus from "../cactus/Cactus"
+import Suculentas from "../suculentas/Suculentas"
+import Filter from "../filter/Filter";
 
-const succUrl = "http://localhost:3001/suculentas" ;
-const cactusUrl = "http://localhost:3001/cactus" ;
+const succUrl = "http://127.0.0.1:8000/plants/plant/" ;
 
 
 function AllFilter() {
 
     const [getDataS, setGetDataS] = useState([{}]);
-    const [getDataC, setGetDataC] = useState([{}]);
 
     useEffect( () => {
         async function handleGetS() {
@@ -21,43 +22,25 @@ function AllFilter() {
         handleGetS();
     }, [])
 
-    useEffect( () => {
-        async function handleGetC() {
-            let res = await axios.get(cactusUrl) ;
-            console.log(res.data)
-            setGetDataC(res.data)
-        }
-        handleGetC();
-    }, [])
 
-    return <div className = "contcard">
-        <div className="fancy">
+    return <div className = "contcard1">
+        <div className="header2">
+            <span>Our Plants</span>
+        </div>
+        <Filter></Filter>
+        <div className="fancy1">
+            <Cactus></Cactus>
+            <Suculentas></Suculentas>
+            <div className="headerCactus1"  name= "all">
+                All
+            </div>
             <div className="gridCard">
             {getDataS.map((item)=> {
-                console.log(item)
-                return <ProductCard name = {item.name} precio = {item.price} img = {item.photo}/>
-            })}
-            {getDataC.map((item)=> {
-                console.log(item)
-                return <ProductCard name = {item.name} precio = {item.price} img = {item.photo}/>
+                return ( 
+                <ProductCard1 name = {item.name} precio = {item.cost} img = {item.image} id = {item.id}/>)
             })}
             </div>
         </div>
-        
-            
-                
-
-
-
-        {/*<div className = "section">
-            <div className = "product">
-                <div className = "itemBox"  ><img src={img1}/></div>
-                <div className = "itemBox"  ><img src={img2}/></div>
-                <div className = "itemBox"  ><img src={img3}/></div>
-                <div className = "itemBox"  ><img src={img4}/></div>
-                <div className = "itemBox"  ><img src={img5}/></div> 
-            </div>
-</div>*/}
     </div>
 }
 
