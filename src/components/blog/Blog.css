@@ -1,0 +1,123 @@
+:root{
+    --verde2 : #92d86a ;
+    --verde1 : #223929 ;
+}
+
+.blogBx{
+    position: relative ;
+    width: 100% ;
+    min-height: 100vh;
+    background: white;
+}
+
+.blogHeader{
+    position: relative ;
+    width: 70% ;
+    margin: 0 auto ;
+    height: 300px ;
+    background-color: whitesmoke;
+    border-radius: 10px ;
+    display: flex ;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 120px;
+}
+.imgBlog{
+    position: relative ;
+    width: 300px ;
+    height: 400px ;
+    margin-bottom: 100px;
+}
+.imgBlog img{
+    position: relative ;
+    width: 100% ;
+    height: 100%;   
+}
+.blogBx .blogHeader span{
+    font-size: 80px;
+    font-weight: lighter;
+    color: var(--verde1);
+
+}
+.blogContent{
+    position: relative ;
+    width: 90% ;
+    height:100% ;
+    margin: 0 auto;
+    display: grid ;
+    margin-top: 100px;
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+}
+.contactInfo{
+    position: relative ;
+    width: 100% ;
+    height: 250px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: space-around;
+    background: whitesmoke;
+}
+.bsInfo{
+    position: relative ;
+    width: 300px;
+    color: var(--verde1);
+}
+.contact span,.bsInfo span {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bolder;  
+    color: #223929; 
+}
+
+
+@media(max-width: 862px){
+    .blogHeader{
+        width: 90% ;
+    }
+
+}
+@media(max-width: 576px){
+    
+    .blogHeader{
+        height: 200px ;
+    }
+    .imgBlog{
+        position: relative ;
+        width: 200px ;
+        height: 250px ;
+        margin-bottom: 100px;
+    }
+    
+    .blogBx .blogHeader span{
+        font-size: 60px;
+        font-weight: lighter;
+        color: var(--verde1);
+    
+    }
+    .blogContent{
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    }
+    .contactInfo{
+        position: relative ;
+        width: 100% ;
+        height: 250px ;
+        display: flex ;
+        align-items: center ;
+        justify-content: space-around;
+        background: whitesmoke;
+    }
+    .bsInfo{
+        position: relative ;
+        width: 300px;
+        color: var(--verde1);
+    }
+    .contact span,.bsInfo span {
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-weight: bolder;  
+        color: #223929; 
+    }
+}
+
