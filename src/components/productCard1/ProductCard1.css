@@ -1,0 +1,132 @@
+:root{
+    /*--------Azules-----------*/
+
+    --azul1 : #73c3e0 ; 
+    --azul2 : #50b7d7 ;
+    --azul3 : #aad3e9 ;
+    --azul4 : rgb(177, 228, 245) ;
+
+    /*--------Verdes------------*/
+    --verde1 : #223929 ;
+    --verde2 : #73a555 ;
+    --verde3 : #75ab7c ;
+    --verde4 : #b1e4f5 ;
+
+    /*-------Amarillo-----------*/
+    --amarillo1 : #fbdc05 ;
+    --amarillo2 : #eec104 ;
+    --amarillo3 : #fae726 ;
+    --amarillo4 : #dbae09 ;
+
+    --white : white ;
+
+}
+
+
+.allCard2{
+    position: relative;
+    min-height: 250px ;
+    width: 200px;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+}
+.card122{
+    position: relative;
+    width: 100%;
+    height: 100% ;
+    border-radius: 20px ;
+}
+.imgBx12{
+    position: relative ;
+    background: transparent;
+    width: 100%;
+    height: 250px;
+    margin: 0 auto ;
+    transition: 0.5s;
+   
+}
+.imgBx12 img{
+    position: relative ;
+    width: 100% ;
+    height: 90%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.namePlant2{
+    position: relative;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    font-size: 13px;
+    color: #223929;
+    top: -20px;
+}
+.information2{
+    position: relative;
+    display: flex ;
+    justify-content: space-between ;
+    font-size: 0.8em;
+    padding: 10px;
+    top: -14px;
+}
+.add2{
+    width: 20px;
+    height: 20px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    color: transparent;
+    border-radius: 5px;
+    cursor: pointer ;
+    transition: 0.2s;
+    font-size: 20px;
+}
+.allCard2:hover .add2{
+    color: orangered;
+}
+.add2:hover{
+    color: orangered;
+}
+.price2{
+    color: #3ea303;
+    position: relative ;
+    width: 100px;
+    display: flex;
+    justify-content: end;
+}
+
+
+@media  (max-width: 809px) {
+    .allCard2{
+        min-height: 150px ;
+        width: 150px;
+    }
+    .card122{
+        border-radius: 10px ;
+    }
+
+    .imgBx12 img{
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    .namePlant2{
+        font-size: 11px;
+    }
+    .information2{
+        position: relative;
+        display: flex ;
+        justify-content: space-between ;
+        font-size: 0.8em;
+        padding: 10px;
+        top: -14px;
+       
+    }
+    .add2{
+        font-size: 15px;
+    }
+    .price2{
+        width: 75px;
+    }
+    
+}
