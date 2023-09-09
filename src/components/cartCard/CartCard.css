@@ -1,0 +1,249 @@
+:root{
+    --verde1 : #223929 ;
+    --verde2 : #73a555 ;
+}
+
+.orderArea{
+    position: relative ;
+    width: 100%;
+    min-height: 100px; 
+}
+
+.namebar{
+    position: relative ;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--verde1);
+    padding: 20px ;
+    text-align: center;
+}
+.orderBx{
+    position: relative;
+    width: 100% ;
+    height: 100% ;
+    display: grid ;
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+}
+.subTitles{
+    position: relative ;
+    width: 100% ;
+    height: 50px;
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: lighter ;
+    text-transform: uppercase ;
+    color: #73a555;
+    font-size: 11px;
+}
+.prod{
+    position: relative;
+    width: 47%;
+}
+.price{
+    width: 10%;
+    text-align: end;
+}
+.qty{
+    width: 100px;
+    text-align: end;
+}
+.st{
+    width: 140px;
+    text-align: center;
+}
+
+.infobar{
+    position: relative;
+    width: 70% ;
+    height: 300px ;
+    border-radius: 10px;
+    margin: 0 auto ;
+    padding: 10px;
+    margin-top: 80px;
+    position: sticky;
+}
+.itemsBx{
+    position: relative;
+    margin-top: 40px;
+}
+.items{
+    position: relative ;
+    width: 100%;
+    height: 90%;
+    background: whitesmoke;
+}
+.items .totalItems{
+    position: relative;
+}
+.cartheader{
+    position: relative ;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(190, 189, 189);
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--verde1);
+}
+.totalItems, .totalPrice{
+    position: relative ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    margin-top: 30px;
+    font-weight: normal;
+    padding: 10px;
+    font-size: 15px;
+}
+.totalPrice{
+    /*border-top: 1px solid rgb(190, 189, 189);*/
+    height: 40px;
+    padding-top: 25px;
+}
+
+.order{
+    position: relative;
+    width: 100% ;
+    height: 40px;
+    background: var(--verde2);
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    border-radius: 2px;
+    color: whitesmoke ;
+    font-size: 1em;
+    margin-top: 100px; 
+    top: 10px;
+    margin: 0 auto; 
+    transition: 0.5s;
+}
+.order:hover{
+    background: var(--verde2);
+}
+.cartCont{
+    position: relative;
+    border-top: 1px solid var(--verde2);
+    padding: 10px ;
+    display: flex ;
+    justify-content: space-around;
+    align-items: center;
+    width: 100% ;
+    color: rgb(53, 50, 50);
+}
+.productImg{
+    position: relative;
+    width: 15%;
+    height: 100px;
+    background: whitesmoke;
+    border-radius: 5px;   
+    object-fit: contain ;
+    overflow: hidden;
+}
+.productImg img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.productName{
+    margin: auto 0;
+    text-align: start;
+    width: 30%;
+    font-size: 15px;
+}
+.productPrice{
+    text-align: center;
+    font-size: 12px;
+}
+.iconBx{
+    position: relative ;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+.iconCenter{
+    position: relative;
+    background: whitesmoke;
+    border-radius: 20px;
+    display: flex;
+    width: 80px;
+}
+
+.addNumber{
+    font-size: 0.8em;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+}
+.addIcon, .minus{
+    position: relative;
+    color: rgb(53, 50, 50);
+    font-size: 1.3em;
+    cursor: pointer ;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.addIcon, .minus{
+    width: 25px;
+    height: 25px;
+    transition: 0.2s;
+}
+.trash1{
+    position: relative;
+    font-size: 1.3em;
+    cursor: pointer ;
+    transition: 0.2s;
+}
+
+.addIcon:hover, .trash1:hover,.minus:hover{
+    color: var(--verde2);
+}
+.subtotal{
+    position: relative;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    font-size: 12px;
+}
+
+@media  (max-width: 638px){
+    .productImg{
+        width: 30%;
+        height: 80px;
+    }
+    .productInfo{
+        width: 50% ;
+    }
+    .prodBx{
+        position: relative ;
+        width: 100%;
+        padding: 10px;
+        font-size: 0.7em;
+    }
+
+    .iconBx{
+        width: 20%;
+        font-size: 0.8em;
+    }
+    .iconBx div {
+        margin-right: 10px;
+    }
+    .trash{
+        margin-left: 10px;
+    }
+    .addNumber{
+        font-size: 0.8em;
+        width: 15px;
+        height: 50px;
+        display: flex ;
+        align-items: center ;
+        justify-content: center;
+    }
+}
