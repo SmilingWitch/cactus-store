@@ -17,40 +17,19 @@
     position: absolute ;
     z-index: 1;
     width: 100% ;
-    height: 60px ;
+    height: 40px ;
     z-index: 10;
     display: flex ;
-    justify-content: flex-start;
-    
-    
-}
-.bx {
-    display: flex;
-}
-.logo {
-    position: relative ;
-    width: 150px ;
-    padding: 10px;
-    font-weight: bolder;
-    color: whitesmoke;
-    background-color: orangered;
-    border-bottom-right-radius: 20px;
-}
-.logo span {
-    align-items: center ;
     justify-content: center;
-    font: 1em ;
 }
-.logo .logo1 {
-    font-size: 2em;
-    
-}
+
 .hamburguerMenu{
     position: relative ;
     width: 800px;
-    height: 100%;
-
-    
+    height: 100%; 
+    display: flex;  
+    align-items: center ;
+    justify-content: center;
 }
 .list {
     position: relative ;
@@ -61,7 +40,7 @@
     position: relative;
     display: flex ;
     justify-content: space-around ;
-    align-content: start ; 
+    align-content: center ; 
 }
 .list .dropdown li {
     font-size: 0.8em;
@@ -80,7 +59,7 @@
 }
 
 .active {
-    color: orangered ;
+    color:  ;
 }
 .menu {
     visibility: hidden ;
@@ -90,7 +69,6 @@
 /*-------------Menu del catalogo -----------*/
 
 .sBar {
-  background-color: ;
   display: flex ;
   align-items: center ;
   justify-content: center;
@@ -98,7 +76,7 @@
   top: 26px;
   padding: 10px;
   background-color: rgba(231, 227, 227,0.9) ;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .sBar ul li{
   margin: 10px; 
@@ -147,47 +125,63 @@
   visibility: visible ;
 }
 .user{
-  display: flex ;
   font-size: 0.8em;
-  width: 200px;
-  justify-content: space-around;
-  margin-top: 2px;
-
 }
-.log, .sing{
+.log,.sing{
+  position: relative;
   width: 80px ;
-  background-color: var(--verde1);
-  color: whitesmoke;
-  height: 30px;
+  height: 32px;
   display: flex ;
   align-items: center ;
   justify-content: center;
-  border-radius: 30px;
+  border-radius: 5px;
   transition: 0.5s;
   cursor: pointer ;
+  top: -7px;
 }
-.log:hover, .sing:hover{
+.log{
+  background: #4ed376 ;
+  color: whitesmoke;
+}
+.sing{
+  color: #223929;
+  border: solid 1px var(--verde1);
+}
+.log:hover{
   background: orangered;
   color: whitesmoke;
+}
+.sing:hover{
+  background: var(--verde1);
+  color: whitesmoke;
+}
+.cartjoin{
+  position: relative;
+  display: flex;
+  width: 300px;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
 }
 .cart{
   width: 50px ;
   height: 30px;
-  display: flex ;
-  align-items: center ;
-  justify-content: center ;
   font-size: 25px;
+
 }
 .cartCircle{
-  position: relative;
+  position: absolute;
   width: 15px ;
   height: 15px ;
   background: orangered ;
   border-radius: 50% ;
-  top: -3px;
   display: flex ;
   align-items: center ;
   justify-content: center ;
+  left: 265px;
+  top: 3px;
+  z-index: 100000000000000000;
+  
 }
 .cartCircle .articles{
   position: relative;
@@ -200,16 +194,15 @@
   cursor: pointer;
   font-size: 0.9;
 }
-
+.log:link{
+  text-decoration: none;
+}
 .cCart:link {
   text-decoration: none ;
   color: var(--verde1) ;
 
 }
-.cCart:link{
-  text-decoration: none ;
-  color: var(--verde1);
-}
+
 .cCart{
   color: var(--verde1);
   position: relative ;
@@ -217,33 +210,49 @@
 }
 
 @media  (max-width: 578px) {
-
+  .bar {
+    display: flex ;
+    justify-content: space-between;  
+}
    .hamburguerMenu {
     position: absolute;
     display: flex ;
     width: 100%;
-    z-index: 10000000000000000000000000000000000000000000000000000000000000000000;
-    justify-content: end ;
+    z-index: 1000000;
+    justify-content: end ; 
+    
    } 
+   .hamburguerMenu .list {
+    min-height: 20px;
+   
+   }
    .menu {
     visibility: visible ;
     cursor: pointer ;
+    height: 10px;
    }
    .Micon{
+    position: relative;
     font-size: 1.3em;
+    top: -20px; 
    }
   .list {
     position: relative;
     display: block ;
-    width: 30%;
+    width: 50%;
+    bottom: 50px;
   }
  
   .list .dropdown{
     display: block ;
+    min-width: 20px;
     min-height: 50px ;
-    border-radius: 20px;
-    background-color: rgba(231, 227, 227,0.9) ;
-    overflow: hidden;
+    border-radius: 5px;
+    background: rgba(255, 255, 255,0.8) ;
+    backdrop-filter: blur(10px);
+    bottom: 50px;
+    
+    
   }
    .menu {
     position: relative;
@@ -251,14 +260,20 @@
     display: flex ;
     align-items: center ;
     justify-content: end;
-    padding: 10px ;
+    padding: 30px ;
   }
+
   li {
+    position: relative;
     width: 100%;
     display: flex ;
     align-items: center ;
     justify-content: center;
     padding: 10px ;
+    /*margin-bottom: 20px;
+    margin-top: 20px;*/
+   
+    
   }
   .user{
     display: flex ;
@@ -266,6 +281,7 @@
     justify-content: space-around ;
     width: 120px;
     height: 50px;
+    z-index: 1000000000000000000000;
   }
   .log, .sing{
     width: 56px ;
@@ -280,6 +296,7 @@
     align-items: center ;
     justify-content: center ;
     font-size: 20px;
+    margin-right: 50px;
   }
   .Active {
     visibility: visible ;
@@ -287,7 +304,19 @@
   .notActive{
     visibility: hidden ;
   }
-
+  .log,.sing{
+    background: transparent;
+    color: #223929;
+    font-size: 1em;
+    width: 100%;
+    border: none;
+    top: 0px;
+  }
+  .log:hover, .sing:hover{
+    background: transparent;
+    color: var(--verde1);
+  }
+  
 /*----------Menu del catalogo----------------*/
 
 .sBar {
@@ -319,12 +348,17 @@
 .menuIndicator{
   display: flex ;
   align-items: center ;
-  justify-content: center;
-  
-  
+  justify-content: center; 
 }
 
 .bicon{
   color: var(--verde1);
 }
+.cartjoin{
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  
+}
+
 }

@@ -8,38 +8,41 @@ import { BsArrowDownShort } from "react-icons/bs";
 import axios from "axios";
 
 
-const orderedUrl = "http://localhost:3001/orderItem" ;
-
-
 function Navbar() {
 
     const [hMenu,setHmenu] = useState(false) ;
-    const [CMenu,setCMenu] = useState(false) ;
-    const [totalItems, setTotalItems] = useState(0);
+    const [items, setItems] = useState();
+    const [circle, setCircle] = useState();
+    const token = localStorage.getItem('token');
 
-        async function handleOrder() {
-            let items = 0;
-            let res = await axios.get(orderedUrl) ;
-            res.data.map((item) =>{
-                items += item.qty
-            })
-            setTotalItems(items)
+   
+    const  SingOut = async () => {
+        const token = localStorage.getItem('token');
+
+        const config = {
+            headers:{
+                Authorization: `Bearer ${token}`
+            }
+        };
+        
+            let res = await axios.get("http://localhost:8000/logout/", config);
+            console.log(res);
+            localStorage.setItem('token', "");
+            localStorage.setItem('refresh_token', "");
+    }
+
+
+    function renderContent() {
+        if (token === "") {
+          return <NavLink to = "/login" className = "log" onClick = {() => {setHmenu(!hMenu)}}  >Sing in</NavLink>
+        } else {
+          return <div className =  "log" onClick={SingOut} > Sing Out </div>;
         }
-        handleOrder();
-
+      }
+    
 
     return(
     <div className="bar">
-        <div className="logo">
-            <div className="bx">
-                <div className="logo1"><RiCactusFill/></div>
-                <div className="logoName">
-                 <span>Plant</span> <br />
-                 <span>Desert</span>
-                </div>
-            </div>  
-        </div>
-        
         <div className="hamburguerMenu">
             <div className="list">
                 <div className="menu" >
@@ -50,55 +53,36 @@ function Navbar() {
                         <NavLink to = "/"  className = {({isActive}) => (isActive ? "active " : "a")  } onClick={() => {setHmenu(!hMenu)}} >Home</NavLink>
                     </li>
                     <li>
-                        {/*-----------Menu del catalogo--------- */}
-                        <div className="catalogueMenu">
-                        
                         <NavLink to = "/catalogue" className = {({isActive}) => (isActive ? "active " : "a")  } >
-                            
-                                <span className="catalogue" onClick = {() => {setHmenu(!hMenu)}} >Catalogue</span>
-                                
-                            
-                            <div className = {CMenu === true  ? "Active1 sBar" : "notActive1 sBar" }>
-                                <ul className="menu1">
-                                    <li>
-                                        <NavLink to = "/catalogue/cactus" className =  "cMenu"
-                                         onClick={() => {
-                                            setCMenu(!CMenu)
-                                            setHmenu(!hMenu)
-                                        }}>Cactus</NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink to = "/catalogue/succulent" className =  "cMenu"  onClick={() => {
-                                            setCMenu(!CMenu)
-                                            setHmenu(!hMenu)
-                                        }} >Succulents</NavLink>
-                                    </li>
-                                </ul>
-                            </div>  
+                                <span className="catalogue" onClick = {() => {setHmenu(!hMenu)}} >Catalogue</span>  
                         </NavLink>
-                        <div className="menuIndicator" onClick={() => {setCMenu(!CMenu)} }> <BsArrowDownShort className="bicon"/> </div>
-                        </div>
                     </li>
                     <li>
-                        <NavLink to = "/info" className = {({isActive}) => (isActive ? "active " : "a") } onClick = {() => {setHmenu(!hMenu)}}  >Information</NavLink>
+                        <NavLink to = "/info" className = {({isActive}) => (isActive ? "active " : "a") } onClick = {() => {setHmenu(!hMenu)}}  >Blog</NavLink>
+                    </li>
+                    <li>
+                        {renderContent()}
+                    </li>
+                    <li>
+                    <NavLink to = "/singup" className =  "sing" onClick = {() => {setHmenu(!hMenu)}}>Sing up</NavLink>
                     </li>
                 </ul>
             </div>
         </div>
-        <div className="user">
-            <div className="log"> Login</div>
-            <div className="sing"> Sing up</div>
+        <div className="cartjoin">
+            <div className="cart"> 
+                    <NavLink to = "/cart" className =  "cCart">
+                        <BiCart className="iconCart"/>
+                    </NavLink>
+                    {/*<div className = "cartCircle" >
+                        <span className="articles" >{items}</span>
+    </div>*/}
+            </div>
         </div>
+        
 
         
-            <div className="cart"> 
-                <NavLink to = "/cart" className =  "cCart">
-                    <BiCart className="iconCart"/>
-                </NavLink>
-                <div className="cartCircle">
-                    <span className="articles">{totalItems}</span>
-                </div>
-            </div>
+            
         
 
                                      
