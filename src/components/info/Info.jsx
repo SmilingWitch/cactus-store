@@ -6,9 +6,6 @@ function Info() {
     return (
         
         <div className="principal">
-            <div>
-
-            </div>
             <div className="firstPageBx">
                 <div className="firstPage">
                         <div className="first_img">
