@@ -34,42 +34,34 @@
 .contcard{
     position: relative;
     width: 100% ;
-    min-height: 100vh;
-    background: var(--catalogeBg);
+    background: white;
     display: flex ;
     align-items: center ;
     justify-content: center;
-    
-
+    min-height: 100px;
 }
 
 .fancy {
     position: relative ;
-    width: 95% ;
-    min-height: 100vh;
-    top: 100px;
-    background: var(--catalogeBg);
+    width: 100% ;
+    background: var(--white);
+
     
 }
 .headerCactus {
-    /*position: relative;
-    display: flex ;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-size: 2em;*/
     position: relative;
     width: 100% ;
-    text-align: center ;
+    text-align: start ;
     text-transform: uppercase ;
-    font-size: 100px ;
-    font-weight: bold ;
-    color: orangered;
+    font-size: 30px ;
+    font-weight: lighter ;
+    color: #73a555;
+    margin-top:50px ;
 
 }
 .gridCard {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr ));
 }
 
 @media  (max-width: 809px) {
@@ -77,6 +69,10 @@
         display: block;
     }
     .headerCactus{
-        font-size: 60px;
+        font-size: 30px;
+    }
+    .gridCard {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr ));
     }
 }
