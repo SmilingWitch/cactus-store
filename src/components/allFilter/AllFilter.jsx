@@ -6,7 +6,8 @@ import Cactus from "../cactus/Cactus"
 import Suculentas from "../suculentas/Suculentas"
 import Filter from "../filter/Filter";
 
-const succUrl = "http://127.0.0.1:8000/plants/plant/" ;
+const succUrl = "https://cactus-shopi.onrender.com/plants/plant/" ;
+
 
 
 function AllFilter() {

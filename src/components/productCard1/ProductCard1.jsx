@@ -22,7 +22,7 @@ function ProductCard1({name , precio, img, id}) {
             }
         };
         try {
-            let res = await axios.get(`http://localhost:8000/client/car/add_car/?plant_id=${id}`, config);
+            let res = await axios.get(`https://cactus-shopi.onrender.com/client/car/add_car/?plant_id=${id}`, config);
             console.log(res);
 
             /*---------------PARA GUARDAR LA PLANTA EN EL CARRITO---------------*/ 
@@ -78,7 +78,7 @@ function ProductCard1({name , precio, img, id}) {
         <div className="allCard2">
             <div className="card122">
                 <div className="imgBx12">
-                        <img src={`http://localhost:8000${img}`}  />
+                        <img src={`https://cactus-shopi.onrender.com${img}`}  />
                 </div>
                 <div className="namePlant2">
                         {name}

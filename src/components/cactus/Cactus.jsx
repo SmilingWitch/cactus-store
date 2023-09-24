@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState , useEffect } from "react";
 import ProductCard1 from "../productCard1/ProductCard1";
 
-const cactusUrl = "http://127.0.0.1:8000/plants/plant/" ;
+const cactusUrl = "https://cactus-shopi.onrender.com/plants/plant/" ;
 
 function Cactus() {
 

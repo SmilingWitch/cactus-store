@@ -21,7 +21,7 @@ function SingUp() {
     async function logIn(username,password,email) {
         const order = log(username,password,email);
         console.log(order);
-        return await axios.post('http://localhost:8000/user/register/',order);
+        return await axios.post('https://cactus-shopi.onrender.com/user/register/',order);
         
     }
 

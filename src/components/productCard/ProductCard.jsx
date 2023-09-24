@@ -7,7 +7,7 @@ import { useState , useEffect } from "react";
 import { json } from "react-router-dom";
 
 
-const orderUrl = "http://localhost:3001/orderItem"
+const orderUrl = "https://cactus-shopi.onrender.com/orderItem"
 const qty = 1;
 
 function newOrder(name,price,photo,qty) {
@@ -62,7 +62,7 @@ function ProductCard({name , precio, img}) {
         <div className="allCard1">
             <div className="card12">
                 <div className="imgBx1">
-                        <img src={`http://localhost:8000${img}`}  />
+                        <img src={`https://cactus-shopi.onrender.com${img}`}  />
                 </div>
                 <div className="namePlant">
                         {name}

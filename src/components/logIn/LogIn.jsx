@@ -16,7 +16,7 @@ function LogIn() {
     async function logIn(username,password) {
         const order = log(username,password);
         console.log(order);
-        return await axios.post('http://localhost:8000/login/',order); 
+        return await axios.post('https://cactus-shopi.onrender.com/login/',order); 
     }
 
     const [username, setUsername] = useState('');

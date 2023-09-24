@@ -25,7 +25,7 @@ function Navbar() {
             }
         };
         
-            let res = await axios.get("http://localhost:8000/logout/", config);
+            let res = await axios.get("https://cactus-shopi.onrender.com/logout/", config);
             console.log(res);
             localStorage.setItem('token', "");
             localStorage.setItem('refresh_token', "");

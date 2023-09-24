@@ -106,7 +106,7 @@ function CartCard() {
                     {filteredCarrito.map((item) => {
                         return <div className="cartCont">
                         <div className="productImg">
-                            <img src={`http://localhost:8000${item.image}`}/>
+                            <img src={`https://cactus-shopi.onrender.com${item.image}`}/>
                         </div>
                         <div className="productName">
                              <span>{item.plant_name}</span>
