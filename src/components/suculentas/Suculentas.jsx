@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState , useEffect } from "react";
 import { json } from "react-router-dom";
 
-const succUrl = "https://cactus-shopi.onrender.com/plants/plant/" ;;
+const succUrl = "https://cactus-shopi.onrender.com/plants/plant/" ;
 
 
 function Suculentas() {
