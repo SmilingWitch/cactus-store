@@ -1,5 +1,5 @@
 import "./CartCard.css"
-import {GoTrashcan} from "react-icons/go"
+import { FaTrash } from "react-icons/fa";
 import {AiOutlinePlus} from "react-icons/ai"
 import {HiOutlineMinus} from "react-icons/hi"
 import axios from "axios";
@@ -13,9 +13,11 @@ function CartCard() {
     const [subtotalP, setSubtotalP] = useState();
      
 
-    const carrito = JSON.parse(localStorage.getItem('miArreglo'));
+    const carrito = JSON.parse(localStorage.getItem('miArreglo')) || [];
     console.log("CARRITO", carrito)
-    /*console.log("ORDER", order.order)*/
+    
+
+
       
       var totalPrice = 0;
       var totalItems = 0;
@@ -131,7 +133,7 @@ function CartCard() {
                             {(item.qty * item.cost).toFixed(2)}
                         </div>
                         <div className="trash1">
-                            <GoTrashcan/>
+                            <FaTrash />
                         </div>
                         </div>
                     })}
