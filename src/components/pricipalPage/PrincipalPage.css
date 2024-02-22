@@ -23,7 +23,8 @@
 }
 @font-face {
     font-family: m1;
-    src: url(./Anton-Regular.ttf);
+    /*src: url(./Anton-Regular.ttf);*/
+    src: url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap")
 } 
 
 *{

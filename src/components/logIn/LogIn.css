@@ -20,7 +20,7 @@
     display: flex ;
     align-items: center ;
     justify-content: center;
-    background-image: url(../../../public/pexels-chris-f-6664458.jpg);
+    /*background-image: url(../../../public/pexels-chris-f-6664458.jpg);*/
     background-size: cover;
     background-position: bottom;
 }
@@ -87,7 +87,7 @@
 .bgSecundary span{
     font-size: 70px ;
     font-weight: bolder;
-    background-image: url(../../../public/pexels-chris-f-6664458.jpg);
+   /* background-image: url(../../../public/pexels-chris-f-6664458.jpg);*/
     background-size: cover;;
     background-size: cover ;
     background-position: bottom;
